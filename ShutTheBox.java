@@ -105,10 +105,13 @@ public class ShutTheBox {
 		int y = 0;
 		Player p = null;
 	    boolean searching = true;
-			while(searching) {
+			while(searching && y < x) {
 				if(Players.get(x).getScore() < Players.get(y).getScore()) {
 					p = Players.get(x);
 					searching = false;
+				}
+				else{
+				  y++;
 				}
 			}
 		p.setWinner();
